@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'JMH Typewriter';
+}
+
+:root {
+    --width-collapsed: 4rem;
+    --width: 20%;
+}
+
+@font-face {
+    font-family: 'JMH Typewriter';
+    src: url('../fuentes/JMH Typewriter.otf');
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 70%;
+    scroll-behavior: smooth;
+}
+
+body {
+    text-align: center;
+    background-color: #191E20;
+    color: #F0F0F0;
+    font-size: 2rem;
+    margin-left: var(--width-collapsed);
+}
+
+a {
+    display: block;
+    color: #F0F0F0;
+    text-decoration: none;
+    width: 80%;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+a img {
+    width: 1.8rem;
+    max-width: 100%;
+}
+
+img {
+    user-select: none;
+}
+
+a:visited {
+    color: #F0F0F0;
+}
+
+.body_expandido {
+    margin-left: var(--width);
+}
+
+.bloque_nav {
+    font-size: 1rem;
+    padding: .2rem 0 .2rem 0;
+    width: 100%;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloque_nav:hover,
+#boton_expandir:hover {
+    background-color: #3B4347;
+    cursor: pointer;
+    border-radius: .4rem;
+}
+
+.menu_expandido .bloque_nav {
+    border-bottom: solid .05rem #3B4347;
+}
+
+.menu_colapsado {
+    width: var(--width-collapsed);
+}
+
+.menu_expandido {
+    width: var(--width);
+}
+
+.menu_colapsado h2 {
+    font-size: 0;
+}
+
+.menu_expandido #lost_world {
+    font-size: .8rem;
+}
+
+.menu_expandido #boton_expandir {
+    text-align: right;
+}
+
+.main {
+    font-size: 1.5rem;
+    text-align: justify;
+    line-height: 1.8rem;
+    padding: 1rem 0 1rem 0;
+    margin: 0 1.5rem 0 1.5rem;
+}
+
+.centro img {
+    height: 100%;
+}
+
+#menu_navegacion {
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    vertical-align: middle;
+    background-color: #171B1D;
+}
+
+#menu_navegacion>* {
+    overflow: hidden;
+}
+
+#boton_expandir {
+    display: inline-block;
+    width: 50%;
+}
+
+#nav {
+    margin-top: 1rem;
+    padding: .3rem 0 .3rem 0;
+}
+
+#menu_navegacion {
+    transition-timing-function: linear;
+    transition: 0.3s;
+    
+}
+
+@media (min-width: 320px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 100%;
+    }
+}
