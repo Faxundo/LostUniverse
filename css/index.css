@@ -1,0 +1,81 @@
+input[type=text] {
+    width: 30%;
+    border: 2px solid #ccc;
+    border-radius: .4rem;
+    font-size: 1rem;
+    background-color: white;
+    background-image: url('../ico/searchicon.png');
+    background-size: 1.5rem;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: .8rem 3rem .8rem 3rem;
+    -webkit-transition: width 0.4s ease-out;
+    transition: width 0.4s ease-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+.titulo {
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Blanka';
+    user-select: none;
+    margin: 5% 10% 10% 10%;
+    letter-spacing: .3rem;
+}
+
+.sub-titulo {
+    font-size: 3rem;
+    text-align: left;
+}
+
+.main {
+    text-align: justify;
+    font-size: 1.5rem;
+    padding: 1rem 0 1rem 0;
+    margin: 0 1.5rem 0 1.5rem;
+    text-indent: 1rem;
+}
+
+#search_bar {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem 0 2rem 20%;
+}
+
+@media (max-width: 320px) {
+    .titulo {
+        font-size: 1.5rem;
+    }
+
+    .sub-titulo {
+        font-size: 1.5rem;
+    }
+
+    .main {
+        font-size: .8rem;
+        text-indent: .5rem;
+    }
+
+    #search_bar {
+        width: 100%;
+        margin: 2rem 0 2rem 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .main {
+        font-size: 1rem;
+    }
+
+    input[type=text] {
+        width: 100%;
+    }
+
+}

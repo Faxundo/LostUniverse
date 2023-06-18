@@ -17,73 +17,92 @@
     <nav class="menu_colapsado" id="menu_navegacion">
 
         <div class="bloque_nav" id="nav">
-            <div id="lost_world">
-                <h2>Lost World</h2>
-            </div>
+            <span id="lost_world">Lost World</span>
             <label id="boton_expandir">
-                <i class="fa-solid fa-bars fa-xl"></i>
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <label id="boton_cerrar">
+                <i class="fa-solid fa-xmark"></i>
             </label>
         </div>
 
-        <div class="bloque_nav">
+        <div class="bloque_nav nav_html">
             <a href="index.html">
-                <img src="imagenes\lostbot.ico">
+                <i class="fa-solid fa-house"></i>
+                <span>Inicio</span>
             </a>
         </div>
 
-        <div class="bloque_nav" id="facebook">
+        <div class="bloque_nav nav_html">
             <a href="https://web.facebook.com/groups/lostworldrol" target="_blank">
-                <i class="fa-brands fa-facebook-f fa-xl"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <span>Facebook</span>
             </a>
 
         </div>
 
-        <div class="bloque_nav" id="discord">
+        <div class="bloque_nav nav_html">
             <a href="https://discord.gg/yRGf6dyxJb" target="_blank">
-                <i class="fa-brands fa-discord fa-xl"></i>
+                <i class="fa-brands fa-discord"></i>
+                <span>Discord</span>
             </a>
 
         </div>
 
-        <div class="bloque_nav">
-            <a href="html\rasgos.html">
-                <h2>Rasgos</h2>
+        <div class="bloque_nav nav_html">
+            <a href="../html/guia_inicio.html">
+                <i class="fa-solid fa-bookmark"></i>
+                <span>Guía de Inicio</span>
             </a>
         </div>
 
-        <div class="bloque_nav">
-            <a href="html\habilidades.html">
-                <h2>Habilidades</h2>
+        <div class="bloque_nav nav_html">
+            <a>
+                <i class="fa-solid fa-gear"></i>
+                <span>Mecánicas</span>
+            </a>
+            <span class="nav_list">
+                <ul>
+                    <li>Ampliadas</li>
+                    <li>Combate</li>
+                    <li>Supervivencia</li>
+                    <li>Exploración</li>
+                    <li>Profesión</li>
+                    <li>Gestión</li>
+                    <li>Contribución</li>
+                    <li>Entrenamiento</li>
+                </ul>
+            </span>
+        </div>
+
+        <div class="bloque_nav nav_html">
+            <a>
+                <i class="fa-solid fa-list"></i>
+                <span>Información</span>
+            </a>
+            <span class="nav_list">
+                <ul>
+                    <li>Rasgos</li>
+                    <li>Habilidades</li>
+                    <li>Mutaciones</li>
+                    <li>Implantes</li>
+                    <li>Recetas</li>
+                    <li>Titulos</li>
+                </ul>
+            </span>
+        </div>
+
+        <div class="bloque_nav nav_html">
+            <a href="../html/wiki.html">
+                <i class="fa-solid fa-book"></i>
+                <span>Wiki</span>
             </a>
         </div>
 
-        <div class="bloque_nav">
-            <a href="html\mutaciones_implantes.html">
-                <h2>Mutaciones e Implantes</h2>
-            </a>
-        </div>
-
-        <div class="bloque_nav">
-            <a href="html\recetas.html">
-                <h2>Recetas</h2>
-            </a>
-        </div>
-
-        <div class="bloque_nav">
-            <a href="html\objetos.html">
-                <h2>Objetos</h2>
-            </a>
-        </div>
-
-        <div class="bloque_nav">
-            <a href="html\contribucion.html">
-                <h2>Contribución</h2>
-            </a>
-        </div>
-
-        <div class="bloque_nav">
-            <a href="html\titulos.html">
-                <h2>Títulos</h2>
+        <div class="bloque_nav nav_html">
+            <a href="../html/mapa.html">
+                <i class="fa-solid fa-map-pin"></i>
+                <span>Mapa</span>
             </a>
         </div>
 
@@ -91,14 +110,20 @@
     </nav>
 
     <header class="centro">
-        <figure>
-            <img src="imagenes/LostWorld_Portada.png">
-        </figure>
-        
+        <div class="titulo">
+            <h1>Lost World</h1>
+        </div>
+        <div class="sub-titulo">
+            <span>Bienvenido</span>
+        </div>
+
     </header>
 
     <main class="main">
-        <div>
+        <div class="main_block" id="search_bar">
+            <input type="text" name="search" placeholder="¿Qué buscas?">
+        </div>
+        <div class="main_block">
             <p>
                 <b>Lost World</b> es un juego de rol escrito que se realiza por medio de un grupo de Facebook.
                 Usa un sistema propio específicamente hecho para el grupo y que está en constante revisión, para ajustes

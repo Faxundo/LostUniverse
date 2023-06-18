@@ -2,12 +2,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'JMH Typewriter';
+
 }
 
 :root {
     --width-collapsed: 4rem;
     --width: 20%;
+    --color-font: #F0F0F0;
 }
 
 @font-face {
@@ -15,41 +16,48 @@
     src: url('../fuentes/JMH Typewriter.otf');
 }
 
+@font-face {
+    font-family: 'Blanka';
+    src: url('../fuentes/Blanka-Regular.otf');
+}
+
+
 html {
-    height: 100%;
-    width: 100%;
-    font-size: 70%;
     scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    font-family: 'JMH Typewriter';
 }
 
 body {
-    text-align: center;
     background-color: #191E20;
-    color: #F0F0F0;
-    font-size: 2rem;
+    color: var(--color-font);
     margin-left: var(--width-collapsed);
 }
 
 a {
     display: block;
-    color: #F0F0F0;
+    color: var(--color-font);
     text-decoration: none;
     width: 80%;
-    padding-top: .3rem;
-    padding-bottom: .3rem;
+    padding: .3rem 0 .3rem 0;
 }
 
-a img {
-    width: 1.8rem;
-    max-width: 100%;
+a:visited {
+    color: var(--color-font);
 }
 
 img {
     user-select: none;
 }
 
-a:visited {
-    color: #F0F0F0;
+ul {
+    list-style-type: none;
+    display: none;
+}
+
+.bloque_nav i {
+    font-size: 1.5em;
 }
 
 .body_expandido {
@@ -63,14 +71,27 @@ a:visited {
     user-select: none;
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .bloque_nav:hover,
-#boton_expandir:hover {
+#boton_expandir:hover,
+#boton_cerrar:hover {
     background-color: #3B4347;
     cursor: pointer;
     border-radius: .4rem;
+    transition: all 400ms ease-in-out;
+}
+
+.nav_html:hover {
+    margin: 0 0 0 8%;
+}
+
+.bloque_nav span {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    transition: all 300ms ease;
 }
 
 .menu_expandido .bloque_nav {
@@ -85,28 +106,18 @@ a:visited {
     width: var(--width);
 }
 
-.menu_colapsado h2 {
+.menu_colapsado span {
     font-size: 0;
+    white-space: nowrap;
 }
 
 .menu_expandido #lost_world {
-    font-size: .8rem;
-}
-
-.menu_expandido #boton_expandir {
-    text-align: right;
-}
-
-.main {
-    font-size: 1.5rem;
-    text-align: justify;
-    line-height: 1.8rem;
-    padding: 1rem 0 1rem 0;
-    margin: 0 1.5rem 0 1.5rem;
+    font-size: 1.2rem;
+    font-family: 'Blanka';
 }
 
 .centro img {
-    height: 100%;
+    width: 100%;
 }
 
 #menu_navegacion {
@@ -116,15 +127,30 @@ a:visited {
     top: 0;
     vertical-align: middle;
     background-color: #171B1D;
+    transition: width 200ms linear;
 }
 
 #menu_navegacion>* {
     overflow: hidden;
 }
 
-#boton_expandir {
+.menu_colapsado #boton_cerrar {
+    display: none;
+}
+
+.menu_colapsado #boton_expandir {
     display: inline-block;
     width: 50%;
+}
+
+.menu_expandido #boton_cerrar {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+}
+
+.menu_expandido #boton_expandir {
+    display: none;
 }
 
 #nav {
@@ -132,18 +158,16 @@ a:visited {
     padding: .3rem 0 .3rem 0;
 }
 
-#menu_navegacion {
-    transition-timing-function: linear;
-    transition: 0.3s;
-    
-}
+@media (max-width: 768px) {
+    .bloque_nav {
+        font-size: .5rem;
+    }
 
-@media (min-width: 320px) {}
+    .bloque_nav i {
+        font-size: 2.5em;
+    }
 
-@media (min-width: 768px) {}
-
-@media (min-width: 1024px) {
-    html {
-        font-size: 100%;
+    .menu_expandido #lost_world {
+        font-size: 1rem;
     }
 }
