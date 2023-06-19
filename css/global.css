@@ -51,11 +51,6 @@ img {
     user-select: none;
 }
 
-ul {
-    list-style-type: none;
-    display: none;
-}
-
 .bloque_nav i {
     font-size: 1.5em;
 }
@@ -66,7 +61,6 @@ ul {
 
 .bloque_nav {
     font-size: 1rem;
-    padding: .2rem 0 .2rem 0;
     width: 100%;
     user-select: none;
     display: flex;
@@ -74,24 +68,20 @@ ul {
     text-align: center;
 }
 
-.bloque_nav:hover,
+a:hover,
 #boton_expandir:hover,
-#boton_cerrar:hover {
+.menu_expandido .activo_boton {
     background-color: #3B4347;
     cursor: pointer;
     border-radius: .4rem;
-    transition: all 400ms ease-in-out;
-}
-
-.nav_html:hover {
-    margin: 0 0 0 8%;
+    transition: ease-in-out 0.4s;
 }
 
 .bloque_nav span {
     display: flex;
     justify-content: center;
     font-size: 1.3rem;
-    transition: all 300ms ease;
+    transition: ease-in-out 0.2s;
 }
 
 .menu_expandido .bloque_nav {
@@ -122,41 +112,53 @@ ul {
 
 #menu_navegacion {
     position: fixed;
-    height: 100%;
     left: 0;
     top: 0;
     vertical-align: middle;
     background-color: #171B1D;
-    transition: width 200ms linear;
+    overflow-y: auto;
+    transition: 0.4s;
 }
 
 #menu_navegacion>* {
     overflow: hidden;
 }
 
-.menu_colapsado #boton_cerrar {
+.menu_expandido a {
+    width: 100%;
+}
+
+.menu_expandido .dropdown {
     display: none;
 }
 
-.menu_colapsado #boton_expandir {
-    display: inline-block;
+.menu_expandido .activo {
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.menu_expandido .dropdown_open.activo_boton {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
     width: 50%;
 }
 
-.menu_expandido #boton_cerrar {
-    display: inline-block;
-    width: 50%;
-    text-align: right;
+.menu_expandido .activo_boton span {
+    display: none;
+}
+
+.menu_expandido #nav {
+    padding-bottom: .5rem;
 }
 
 .menu_expandido #boton_expandir {
     display: none;
 }
 
-#nav {
-    margin-top: 1rem;
-    padding: .3rem 0 .3rem 0;
-}
 
 @media (max-width: 768px) {
     .bloque_nav {
