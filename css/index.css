@@ -1,81 +1,105 @@
-input[type=text] {
-    width: 30%;
-    border: none;
-    border-radius: .4rem;
-    font-size: 1rem;
-    background-color: white;
-    background-image: url('../ico/searchicon.png');
-    background-size: 1.5rem;
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: .8rem 3rem .8rem 3rem;
-    transition: width 0.4s ease-out;
-    font-family: 'JMH Typewriter';
+
+
+input[type="text"] {
+  width: 30%;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  background-color: white;
+  background-image: url("../ico/searchicon.png");
+  background-size: 1.5rem;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 0.8rem 3rem 0.8rem 3rem;
+  transition: width 0.4s ease-out;
+  font-family: "JMH Typewriter";
 }
 
-input[type=text]:focus {
-    width: 60%;
+input[type="text"]:focus {
+  width: 60%;
+  outline: none;
 }
 
 .titulo {
-    font-size: 4rem;
-    text-align: center;
-    font-family: 'Blanka';
-    user-select: none;
-    margin: 5% 10% 10% 10%;
-    letter-spacing: .3rem;
+  font-size: clamp(24px, 6vw, 96px);
+  text-align: center;
+  font-family: "Blanka";
+  user-select: none;
+  margin: 5% 10% 10% 10%;
+  letter-spacing: 0.3rem;
 }
 
 .sub-titulo {
-    font-size: 3rem;
-    text-align: left;
+  font-size: 3rem;
+  text-align: left;
 }
 
 .main {
-    text-align: justify;
-    font-size: 1.5rem;
-    padding: 1rem 0 1rem 0;
-    margin: 0 1.5rem 0 1.5rem;
-    text-indent: 1rem;
+  text-align: justify;
+  font-size: 1.5rem;
+  padding: 1rem 0 1rem 0;
+  margin: 0 1.5rem 0 1.5rem;
 }
 
 #search_bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 2rem 0 2rem 0;
+}
+
+.main_block span button {
+  font-family: 'JMH Typewriter';
+  font-size: 16px;
+  width: 12vw;
+  height: 4vw;
+  color: var(--color-font);
+  background-color: var(--color-hover);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.main_block span button:hover {
+  background-color: #566066;
+  transition: ease-in-out .4s;
+}
+
+@media screen and (max-width: 767px) {
+
+  input[type="text"] {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+  }
+
+  input[type="text"]:focus {
+    width: 100%;
+  }
+
+  .titulo {
+    font-size: 1.5rem;
+  }
+
+  .sub-titulo {
+    font-size: 1.5rem;
+  }
+
+  .main {
+    font-size: 0.8rem;
+    text-indent: 0.5rem;
+  }
+
+  #search_bar {
+    width: 100%;
     margin: 2rem 0 2rem 0;
+  }
 }
 
-@media (max-width: 320px) {
-    .titulo {
-        font-size: 1.5rem;
-    }
-
-    .sub-titulo {
-        font-size: 1.5rem;
-    }
-
-    .main {
-        font-size: .8rem;
-        text-indent: .5rem;
-    }
-
-    #search_bar {
-        width: 100%;
-        margin: 2rem 0 2rem 0;
-    }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    font-size: 1rem;
+  }
 }
 
-
-@media (max-width: 768px) {
-
-    .main {
-        font-size: 1rem;
-    }
-
-    input[type=text] {
-        width: 100%;
-    }
-
+@media screen and (min-width: 1024px) {
 }
