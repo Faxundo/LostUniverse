@@ -192,10 +192,6 @@ a:hover,
     margin-left: 0;
   }
 
-  .bloque_nav:not(#nav_principal) {
-    display: none;
-  }
-
   #menu_navegacion {
     height: auto;
   }
